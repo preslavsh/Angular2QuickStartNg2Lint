@@ -8,9 +8,7 @@ gulp.task('default', function () {
 
 gulp.task("custom-ts-rules", ()=>
     gulp.src("app/*.ts")
-        .pipe(tslint({
-            "rulesDirectory": "node_modules/ng2lint/dist/src/"
-        }))
+        .pipe(tslint())
         .pipe(tslint.report('prose', {
             emitError: false
         }))
